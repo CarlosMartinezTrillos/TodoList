@@ -8,16 +8,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS limpio y único
-origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://toddollistc.netlify.app"
-]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://toddollistc.netlify.app"
+],
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
