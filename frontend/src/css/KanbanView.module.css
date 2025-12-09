@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px; /* espacio para navbar */
+  width: 100vw;        /* ocupa todo el ancho de la ventana */
+  height: 100vh;       /* ocupa toda la altura de la ventana */
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Wrapper del buscador fijo debajo del navbar */
+.filtersWrapper {
+  position: sticky;
+  top: 72px; /* altura del navbar */
+  padding: 8px 16px;
+  background-color: #f7f9fc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+  width: 100%;
+}
+
+/* Contenido principal */
+.mainContent {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  padding: 8px 16px; /* ajustable para separar un poco del borde */
+  overflow-y: auto;  /* scroll vertical solo si hace falta */
+}
+
+/* Panel izquierdo: Form y filtros */
+.leftPane {
+  flex: 0 0 220px; /* ancho fijo para el form */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Panel derecho: Kanban */
+.rightPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Tablero Kanban: scroll horizontal si hay muchas columnas */
+.kanbanBoard {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+/* Columnas Kanban con ancho mínimo */
+.kanbanColumn {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Contenedor del input con X */
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding-right: 25px; /* espacio para la X */
+  box-sizing: border-box;
+}
+
+.clearX {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+  user-select: none;
+  font-weight: bold;
+}
+
+.clearX:hover {
+  color: #333;
+}
+
+/* Para los botones de filtro rápido con X */
+.filterItem {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-right: 8px;
+}
+
+.filterItem .clearX {
+  margin-left: 4px;
+  cursor: pointer;
+  color: #888;
+  font-weight: bold;
+  user-select: none;
+}
+
+.filterItem .clearX:hover {
+  color: #333;
+}
+
+.kanbanBoard {
+  display: flex;
+  gap: 16px;           /* espacio entre columnas */
+  overflow-x: auto;    /* activa scroll horizontal */
+  padding-bottom: 8px; /* espacio para que no tape el scrollbar */
+  width: 100%;
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Opcional para Webkit (Chrome, Edge, Safari) */
+.kanbanBoard::-webkit-scrollbar {
+  height: 8px;
+}
+
+.kanbanBoard::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.kanbanBoard::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+
+.mainContent {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    padding: 55px 16px;
+    overflow-y: auto;
+}

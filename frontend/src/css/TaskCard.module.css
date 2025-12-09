@@ -1,0 +1,119 @@
+.taskCard {
+  background-color: #e5e5e5; /* gris suave */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taskCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Colores de prioridad */
+.alta {
+  background-color: #f8c8c8; /* rojo pastel */
+  color: #a94442;
+}
+
+.media {
+  background-color: #fdf0b3; /* amarillo pastel */
+  color: #8a6d3b;
+}
+
+.baja {
+  background-color: #c8e6f8; /* azul pastel */
+  color: #31708f;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.editar {
+  background-color: #dcdcdc; /* gris pastel */
+  color: #333;
+}
+
+.editar:hover {
+  background-color: #c0c0c0;
+}
+
+.eliminar {
+  background-color: #f8d7da; /* rojo suave */
+  color: #a94442;
+}
+
+.eliminar:hover {
+  background-color: #f1b0b7;
+}
+
+/* Estados de la tarea */
+.pending {
+  border-left: 4px solid #ffd966; /* amarillo pastel */
+}
+
+.in_progress {
+  border-left: 4px solid #8fc1e3; /* azul pastel */
+}
+
+.completed {
+  border-left: 4px solid #a2d39c; /* verde pastel */
+}
+
+.cancelled {
+  border-left: 4px solid #f5a6a6; /* rojo pastel */
+}

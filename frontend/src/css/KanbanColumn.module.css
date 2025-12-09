@@ -1,0 +1,59 @@
+.kanbanColumn {
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.kanbanColumn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.tituloColumna {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  background-color: rgba(0,0,0,0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.kanbanList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 50px;
+}
+
+/* Colores según estado de la columna */
+.pendiente {
+  background-color: #fff8e1; /* amarillo tenue */
+}
+
+.enProgreso {
+  background-color: #e3f2fd; /* azul tenue */
+}
+
+.completada {
+  background-color: #e8f5e9; /* verde tenue */
+}
+
+.cancelada {
+  background-color: #fce4ec; /* rosa tenue */
+}

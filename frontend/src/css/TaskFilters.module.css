@@ -1,0 +1,194 @@
+/* Contenedor principal de filtros */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 97%;
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f9fc;
+  padding: 6px 16px ;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 56px; /* altura del navbar */
+  z-index: 10;
+}
+
+/* Formulario de búsqueda */
+.searchForm {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.searchForm input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #A7C5EB;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: border-color 0.3s;
+}
+
+.searchForm input:focus {
+  border-color: #236AB9;
+  outline: none;
+}
+
+/* Botones del form */
+.btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #CCCCCC;
+  color: #333;
+}
+
+.btn.small {
+  padding: 3px 6px;
+  font-size: 11px;
+}
+
+.btn:hover {
+  background-color: #236AB9;
+  color: #fff;
+}
+
+.btn.ghost {
+  background-color: transparent;
+  border: 1px solid #236AB9;
+  color: #236AB9;
+}
+
+.btn.ghost:hover {
+  background-color: #A7C5EB;
+  color: #0A2F5C;
+}
+
+/* Filtros rápidos */
+.quick {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Estado de carga o sin resultados */
+.status {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #0A2F5C;
+  margin-top: 4px;
+  position: relative;
+}
+
+/* Spinner animado */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #236AB9;
+  border-top: 2px solid #A7C5EB;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mensaje de no resultados */
+.noResults {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  font-weight: 500;
+  font-size: 12px;
+  color: #721C24; /* rojo suave */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding-right: 25px; /* espacio para la X */
+}
+
+.clearX {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+  user-select: none;
+}
+
+.clearX:hover {
+  color: #333;
+}
+
+.filterItem {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-right: 8px;
+}
+
+.filterItem .clearX {
+  margin-left: 4px;
+  cursor: pointer;
+  color: #888;
+  font-weight: bold;
+  user-select: none;
+}
+
+.filterItem .clearX:hover {
+  color: #333;
+}
+
+/* TaskFilters.module.css */
+
+/* Wrapper de cada filtro rápido */
+.filterItem {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  position: relative;
+}
+
+/* Botón del filtro rápido */
+.filterItem .btn {
+  padding-right: 22px; /* espacio para la X dentro del botón */
+  position: relative;
+}
+
+/* La X para limpiar */
+.clearX {
+  position: absolute;
+  right: 4px; /* distancia desde el borde del botón */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.clearX:hover {
+  color: var(--danger);
+}

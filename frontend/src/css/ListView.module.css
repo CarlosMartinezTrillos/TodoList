@@ -1,0 +1,65 @@
+/* Contenedor de las tarjetas */
+.list-results.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 16px; /* espacio entre tarjetas */
+  margin-top: 16px;
+}
+
+/* Si no hay tareas, el mensaje ocupa ambas columnas */
+.list-results.grid-two p {
+  grid-column: span 2;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Opcional: responsive para móviles, baja a 1 columna */
+@media (max-width: 768px) {
+  .list-results.grid-two {
+    grid-template-columns: 1fr;
+  }
+}
+.list-results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  gap: 16px; /* espacio entre tarjetas */
+  width: 100%; /* ocupa todo el contenedor disponible */
+  margin-top: 16px;
+}
+
+/* Para el mensaje de "No hay tareas" que ocupe ambas columnas */
+.list-results p {
+  grid-column: span 2;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Opcional: responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .list-results {
+    grid-template-columns: 1fr; /* baja a 1 columna */
+  }
+}
+
+.list-results.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+  width: 100%;
+  align-items: start; /* evita que se estiren verticalmente */
+}
+
+@media (max-width: 768px) {
+  .list-results.grid-two {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila en móviles */
+  }
+}
+
+.Content {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    padding: 55px 16px;
+    overflow-y: auto;
+}

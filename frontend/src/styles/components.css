@@ -1,0 +1,3 @@
+/* tiny extra styling that complements index.css */
+.container { padding-bottom: 40px; }
+.page-left .task-form { position: sticky; top: 16px; }

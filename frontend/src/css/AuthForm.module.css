@@ -1,0 +1,146 @@
+/* ================= AuthForm Mejorado ================= */
+
+/* Wrapper centrado de todo el formulario */
+.authWrapper {
+  width: 100vw;           /* ancho completo */
+  height: 100vh;          /* altura completa */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;     /* evita scroll horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec; /* gris muy claro */
+  animation: fadeIn 0.6s ease-out;
+  box-sizing: border-box;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Formulario */
+.authForm {
+  background-color: #f8f8f8; /* gris suave */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authForm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.authForm h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grupo de input */
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+/* Label del input */
+.inputGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555555; /* gris medio */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Wrapper para input + icono */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWrapper .icon {
+  position: absolute;
+  left: 12px;
+  color: rgba(50, 50, 50, 0.4); /* iconos más transparentes */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 10px 10px 10px 36px; /* espacio para icono */
+  border: 1.5px solid #cccccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0; /* gris muy suave */
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.inputWrapper input:focus {
+  border-color: #888888; /* gris más oscuro al focus */
+  outline: none;
+  box-shadow: 0 0 8px rgba(136, 136, 136, 0.3);
+  background-color: #ffffff;
+}
+
+.inputWrapper input:focus + .icon {
+  color: rgba(50, 50, 50, 0.7); /* icono se oscurece al focus */
+  transform: scale(1.1);
+}
+
+/* Input con error */
+.errorInput {
+  border-color: #ff6b6b;
+}
+
+/* Mensajes de error */
+.errorMsg {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #ff6b6b;
+  font-size: 13px;
+}
+
+.errorMsg svg {
+  margin-right: 5px;
+}
+
+/* Botón principal */
+.btnPrimary {
+  width: 100%;
+  padding: 12px;
+  background-color: #888888; /* gris medio */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btnPrimary:hover {
+  background-color: #555555; /* gris más oscuro */
+  transform: translateY(-2px);
+}
+
+.btnPrimary:active {
+  transform: translateY(1px);
+}
+
+/* Error del servidor */
+.serverError {
+  color: #ff6b6b;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}

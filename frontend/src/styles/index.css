@@ -1,0 +1,84 @@
+:root{
+  --bg:#f3f7fb;
+  --card:#ffffff;
+  --muted:#6c7680;
+  --accent:#236AB9;
+  --danger:#e04545;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:110%}
+body{
+  margin: 0;
+  padding: 90px;
+  font-family:Inter, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0px}
+.app-root .container{padding-top:0}
+.nav{background:#0A2F5C;padding:8px 0;color:#fff}
+.nav .brand{margin:0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;margin-left:16px}
+.nav-links a.active{font-weight:700;color:#fff}
+
+/* layout */
+.page{display:flex;gap:20px}
+.page-left{width:320px}
+.page-right{flex:1}
+
+.home-page .page {
+  gap: 0px; /* o el valor que quieras para Home */
+}
+
+/* task form */
+.task-form{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.task-form input, .task-form select{width:100%;padding:8px;margin:6px 0;border:1px solid #e6eefb;border-radius:6px}
+.task-form .row{display:flex;gap:8px}
+.task-form .row > *{flex:1}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.btn{background:var(--accent);color:#fff;padding:8px 10px;border-radius:6px;border:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.small{padding:6px 8px;font-size:13px}
+
+/* kanban */
+.kanban-board{display:flex;gap:16px;align-items:flex-start}
+.kanban-column{width:260px;background:linear-gradient(180deg,#ffffff,#fbfeff);padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.kanban-list{min-height:40px;display:flex;flex-direction:column;gap:8px}
+.task-card{background:var(--card);padding:10px;border-radius:8px;border:1px solid #eef6ff}
+.task-card .task-header{display:flex;justify-content:space-between;align-items:center}
+.task-card .muted{color:var(--muted);font-size:13px}
+.task-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.chip{padding:4px 8px;border-radius:8px;font-size:12px}
+.priority-high{background:#ffd6d6;color:#6b0000}
+.priority-medium{background:#fff4d6;color:#6a4c00}
+.priority-low{background:#e6fff0;color:#006b2e}
+
+/* list */
+.list-page .list-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* fuerza 2 columnas */
+  gap: 16px; /* espacio entre tarjetas */
+  margin-top: 81px;
+  width: 100%; /* ocupa todo el contenedor */
+  max-width: 100%;
+}
+
+/* Responsive: baja a 1 columna en móviles */
+@media (max-width: 768px) {
+  .list-page .list-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* dashboard */
+.cards{display:flex;gap:12px}
+.card{background:var(--card);padding:12px;border-radius:8px;flex:1}
+
+/* small helpers */
+.muted{color:var(--muted);font-size:13px}
+.count{background:#eef6ff;padding:2px 6px;border-radius:12px;margin-left:6px}
+
