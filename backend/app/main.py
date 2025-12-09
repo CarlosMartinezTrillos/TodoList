@@ -8,6 +8,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# CORS limpio y único
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
@@ -22,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Incluye routers sin duplicar prefijo
+# Routers
 app.include_router(tasks.router, prefix="/tasks", tags=["Tasks"])
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
 
